@@ -44,5 +44,6 @@ public class Main {
         String pathToTestFile = "/Users/artemlobachev/development/repos/algs4/Dynamic connectivity/out/production/Dynamic connectivity/org/artemyl/largeUF.txt";
         testWithClass(WeightedQuickUnionFind.class, pathToTestFile );
         testWithClass(CompressedWeightedQuickUnionFind.class, pathToTestFile);
+        testWithClass(QuickFind.class, pathToTestFile);
     }
 }
