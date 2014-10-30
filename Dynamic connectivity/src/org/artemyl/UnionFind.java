@@ -5,18 +5,18 @@ package org.artemyl;
  */
 public abstract class UnionFind {
 
-    protected int id[];
+    protected int objectToSet[];
     protected int count;
 
-    public abstract int find(int id);
-    public abstract int union(int id1, int id2);
+    public abstract int find(int objectID);
+    public abstract void union(int objectID1, int objectID2);
 
     public int count(){
         return this.count;
     }
 
-    public boolean connected(int id1, int id2){
-        return this.find(id1) == this.find(id2);
+    public boolean connected(int objectID1, int objectID2){
+        return this.find(objectID1) == this.find(objectID2);
     }
 
 }
