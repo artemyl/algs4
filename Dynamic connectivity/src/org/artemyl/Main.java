@@ -11,7 +11,7 @@ public class Main {
     public static void testWithClass(Class myUFClass, String pathToTestFile){
         In input = new In(pathToTestFile);
         int N = input.readInt();
-        StdOut.printf("Input created, N = %d\n", N);
+        StdOut.printf("Input created, N = %d%n", N);
         UnionFind uf;
 
         try {
@@ -20,7 +20,7 @@ public class Main {
             if (objectByClassName instanceof UnionFind){
                 uf = (UnionFind) objectByClassName;
                 String className = uf.getClass().getCanonicalName();
-                StdOut.printf("UF class \"%s\" prepared\n", className);
+                StdOut.printf("UF class \"%s\" prepared%n", className);
                 long startTime = System.currentTimeMillis();
                 while (!input.isEmpty()) {
                     int p = input.readInt();
@@ -30,7 +30,7 @@ public class Main {
                 }
                 long time = System.currentTimeMillis() - startTime;
                 StdOut.println(uf.count() + " components");
-                StdOut.printf("Test time for class \"%s\" = %d\n", className, time);
+                StdOut.printf("Test time for class \"%s\" = %d%n", className, time);
             } else {
                 StdOut.println("Error: given class is not instance of UnionFind class!");
             }
