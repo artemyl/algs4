@@ -6,11 +6,11 @@ package org.artemyl;
 public class QuickSort extends AbstractSort {
 
     protected int partition(Comparable array[], int min, int max){
-        int i = min + 1, j = max;
+        int i = min, j = max + 1;
         Comparable referenceElement = array[min];
         do {
-            while (this.less(array[i], referenceElement) && (i < max)) i++;
-            while (this.less(referenceElement, array[j]) && (j > min)) j--;
+            while (this.less(array[++i], referenceElement) && (i != max));
+            while (this.less(referenceElement, array[--j]) && (j != min));
             if (i < j) this.swap(array, i, j);
         } while (i < j);
         this.swap(array, min, j);
