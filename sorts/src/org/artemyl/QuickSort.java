@@ -2,6 +2,8 @@ package org.artemyl;
 
 /**
  * Created by artemlobachev on 09.11.14.
+ * Methods were made protected to improve them in extended classes - for example,
+ * make other types of sorting for small arrays.
  */
 public class QuickSort extends AbstractSort {
 
