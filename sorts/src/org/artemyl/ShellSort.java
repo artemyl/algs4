@@ -7,11 +7,8 @@ public class ShellSort extends AbstractSort {
 
     // Knuth, O(N^(3/2))
     private int countD(int arrayLength){
-        int d = 1, i = 1, l = arrayLength / 3;
-        while (d < l){
-            d = 3 * i + 1;
-            i++;
-        }
+        int d = 1, l = arrayLength / 3;
+        while (d < l) d = 3 * d + 1;
         return d;
     }
 
