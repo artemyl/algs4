@@ -14,7 +14,8 @@ public abstract class AbstractSort {
 
     public boolean isSorted(Comparable array[]){
         for (int i = 0; i < array.length - 1; i++){
-            if (!this.less(array[i], array[i+1])){
+            if (this.less(array[i + 1], array[i])){
+                System.err.printf("Error in element №%d in class %s%n", i, this.getClass().getCanonicalName());
                 return false;
             }
         }
