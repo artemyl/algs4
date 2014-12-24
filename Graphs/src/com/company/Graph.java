@@ -64,6 +64,7 @@ public class Graph {
             }
             s.append(lineSeparator);
         }
+        s.setLength(s.length() - 1);
         return s.toString();
     }
 }
