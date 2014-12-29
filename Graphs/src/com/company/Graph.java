@@ -8,9 +8,10 @@ import edu.princeton.cs.introcs.In;
  */
 public class Graph {
 
-    private final int vCount;
-    private int eCount;
-    private Bag<Integer> graphStructure[];
+    protected final int vCount;
+    protected int eCount;
+    protected Bag<Integer> graphStructure[];
+
 
     @SuppressWarnings("unchecked")
     public Graph(int vertexesCount){
