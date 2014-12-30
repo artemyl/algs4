@@ -44,7 +44,7 @@ public class EdgeWeightedGraph {
     public void addEdge(Edge e) {
         int vertex1 = e.either();
         int vertex2 = e.other(vertex1);
-        if (vertex1 < this.vCount && vertex2 < this.eCount) {
+        if (vertex1 < this.vCount && vertex2 < this.vCount) {
             this.graphStructure[vertex1].add(e);
             this.graphStructure[vertex2].add(e);
             this.eCount++;
